@@ -7,7 +7,7 @@ import (
 // Model is used as a base for other models. Similar to gorm.Model without `DeletedAt`.
 // We don't want soft-delete support.
 type Model struct {
-	ID        uint `gorm:"primary_key"`
+	ID        uint64 `gorm:"primary_key"`
 	CreatedAt time.Time
 	UpdatedAt time.Time
 }
